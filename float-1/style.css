@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
+  background-color: black;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+/* .tab-menu 클래스로 안 한 이유: ul이면 그냥 불렛 같은 거 다 안 붙게 하기 위해서 ul로 함. */
+ul {
+  list-style: none;
+  padding-left: 0;
+  background-color: white;
+}
+
+/* .tab-menu {
+  overflow: hidden;
+} */
+
+.tab-menu {
+  max-width: 540px;
+  border-bottom: 1px solid #e5eaef;
+}
+
+.tab-menu::after {
+  content: '';
+  /* clear사용하려면 반드시 display가 block이 되어야 한다 */
+  display: block;
+  clear: left;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab-menu-item a {
+  display: block;
+  padding: 16px 20px;
+}
+
+.tab-menu-item.selected {
+  border-bottom: 2px solid #2860e1;
+}
+
+/* tab-menu-item이자 selected를 갖고 있는 클래스라면, 거기 안에 있는 a태그 에게~ 라는 뜻 */
+.tab-menu-item.selected a {
+  color: #2860e1;
+  font-weight: 500;
+}
