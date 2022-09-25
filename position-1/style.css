@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #273444;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.user-photo,
+.user-name {
+  float: left;
+}
+
+/* 수직 정렬하는 방법. 좋은 방법 아님. */
+.user-name {
+  padding: 8px 0;
+}
+
+.user-card {
+  width: 240px;
+  height: 56px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+}
+
+.user-photo img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-right: 12px;
+}
+
+.user-status {
+  display: block; /*position absolute를 줬기 때문에 
+  display block 지워도 됨.*/
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #21d891;
+  border: 2px solid #ffffff;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+}
+
+/* box-sizing을 얘만 바꿔서 스타일링 해줄 수도 있다. */
+/* .user-status {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #21d891;
+  border: 2px solid #ffffff;
+  box-sizing: content-box;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
